@@ -21,7 +21,8 @@ const routes: Routes = [
   {
     path: 'job-description',
     component: DetailWorkComponent
-  }
+  },
+
 ];
 
 @NgModule({

@@ -8,32 +8,30 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
   createProfileForm: FormGroup;
+  form: FormGroup;
   constructor() {}
   count = 0;
+
   disabled = true;
   buttonEdit = {
     text: 'แก้ไขโปรไฟล์',
     status: true,
   };
 
-  profile = {
-    name: 'worawut sangangam',
-    age: 22,
-    phone: '084-3327198',
-    email: 'boyjam1@hotmail.com',
-    address: 'Burapha',
-    sex: 'ชาย',
-  };
 
   ngOnInit() {
     this.createProfileForm = new FormGroup({
       'name': new FormControl('worawut sangangam'),
+      'birthday': new FormControl('1996-10-10'),
       'age': new FormControl('22'),
       'phone': new FormControl('084-3327198'),
       'email': new FormControl('boyjam1@hotmail.com'),
       'address': new FormControl('Burapha'),
       'gender': new FormControl('ชาย'),
+      'image': new FormControl(''),
     });
+    console.log(this.createProfileForm.value.birthday.substring(0, 4));
+    console.log(new Date().toISOString().substring(0, 4));
   }
 
   unDisabled(check) {
@@ -53,8 +51,9 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  saveProfile() {
-
+  onFileSelected(event) {
+    console.log(event);
   }
+
 
 }
