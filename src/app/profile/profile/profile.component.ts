@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
   form: FormGroup;
   constructor() {}
   count = 0;
+
   disabled = true;
   buttonEdit = {
     text: 'แก้ไขโปรไฟล์',
@@ -21,7 +22,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.createProfileForm = new FormGroup({
       'name': new FormControl('worawut sangangam'),
-      'birthday': new FormControl('2015-03-25'),
+      'birthday': new FormControl('1996-10-10'),
       'age': new FormControl('22'),
       'phone': new FormControl('084-3327198'),
       'email': new FormControl('boyjam1@hotmail.com'),
@@ -29,6 +30,8 @@ export class ProfileComponent implements OnInit {
       'gender': new FormControl('ชาย'),
       'image': new FormControl(''),
     });
+    console.log(this.createProfileForm.value.birthday.substring(0, 4));
+    console.log(new Date().toISOString().substring(0, 4));
   }
 
   unDisabled(check) {

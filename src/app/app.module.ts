@@ -13,6 +13,7 @@ import { DialogLoginComponent } from './dialog-login/dialog-login.component';
 
 import { CreateJobComponent } from './create-job/create-job.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MyJobComponent } from './my-job/my-job.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DialogLoginComponent,
     CreateJobComponent,
     DashboardComponent,
+    MyJobComponent,
   ],
   imports: [
     BrowserModule,
