@@ -9,19 +9,52 @@
   </div>
 </div>
 
-<div class="row">
-
-  <div class="tile">
-    <img class="img" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
-    <h5>ชื่อโพสงาน</h5>
-    <span>ผู้โพส: </span> <span>Chonticha</span>
-    <div>
-      <span>สถานะ: </span>
-      <span>ยังเปิดรับคนอยู่</span>
+<div class="tile" *ngFor="let job of jobs">
+  <div class="row">
+    <div class="col-md-2">
+      <img class="img" src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt="">
     </div>
-    <br>
-    <div class="tile-footer">
-      <a class="btn btn-primary" href="#">ดูเพิ่มเติม</a>
+    <div class="col-md-10">
+      <h5>{{job.name}}</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+            <b>ผู้โพส: </b>
+            <span>{{job.userOwner}}</span>
+          </div>
+          <div>
+            <b>ที่ทำงาน: </b>
+            <span>{{job.address}}</span>
+          </div>
+          <div>
+            <b>ค่าแรง: </b>
+            <span>{{job.price}} {{job.jobType}}</span>
+          </div>
+          <div>
+            <b>วันที่ทำงาน: </b>
+            <span>{{job.startDate | date:'dd/MM/yyyy'}} ถึง {{job.endDate | date:'dd/MM/yyyy'}}</span>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div>
+            <b>เพศ: </b>
+            <span>{{job.genderCondition}}</span>
+          </div>
+          <div>
+            <b>อายุ: </b>
+            <span>{{job.beginAge}} ถึง {{job.endAge}} ปี</span>
+          </div>
+          <div>
+            <b>สถานะ: </b>
+            <span>{{job.jobStatus}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="tile-footer">
+        <a class="btn btn-primary" routerLink="/job-description/{{job.id}}">ดูเพิ่มเติม</a>
+      </div>
     </div>
   </div>
 </div>
