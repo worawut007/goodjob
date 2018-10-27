@@ -1,15 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DialogLoginComponent } from '../../dialog-login/dialog-login.component';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  bsModalRef: BsModalRef;
+  constructor(
+    private modalService: BsModalService,
+  ) { }
 
   ngOnInit() {
+  }
+  openDialog(): void {
+    const initialState = {
+      title: 'เพิ่มรายชื่อ',
+      closeBtnName: 'ยกเลิก',
+      confirmBtnName: 'ยืนยัน',
+    };
+
+    this.bsModalRef = this.modalService.show(DialogLoginComponent, {
+      class: 'modal-dialog-centered',
+      initialState,
+      animated: false,
+      keyboard: true
+    });
   }
 
 }
