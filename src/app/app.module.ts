@@ -8,7 +8,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { MailInboxComponent } from './mail/mail-inbox/mail-inbox.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { DetailWorkComponent } from './detail-work/detail-work.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { DetailWorkComponent } from './detail-work/detail-work.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

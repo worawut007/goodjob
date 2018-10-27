@@ -4,6 +4,24 @@ img{
 }
 
 label{
-    font-size: 200%;
+    font-size: 100%;
 }
 
+input:disabled {
+    outline:none;
+    border-color: white;
+    background-color: white;
+    align-content: center;
+}
+
+select:disabled{
+    border-color: white;
+    background-color: white;
+    align-content: center;
+}
+
+textarea:disabled{
+    border-color: white;
+    background-color: white;
+    align-content: center;
+}

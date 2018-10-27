@@ -6,18 +6,87 @@
           alt="User Image" />
       </div>
       <div class="col-row">
+        <h1>งานล่าสุด</h1>
         <ul>
-          <li>Hello</li>
+          <li>ตัดไม้</li>
+          <li>สอนพิเศษ</li>
+          <li>ล้างจาน</li>
+          <li>นวด</li>
+          <li>ตัดหญ้า</li>
         </ul>
       </div>
     </div>
     <div class="col-md-9">
-        <div class="form-group" >
-          <h1>รายละเอียด</h1>
-         <p>
-           นาย ธุรกิจ เฉยเล้ก 
-          </p>
+      <div class="form-group">
+
+
+        <form class="form-horizontal" [formGroup]="createProfileForm">
+          <div class="form-group row">
+            <label class="control-label col-md-3">ชื่อ</label>
+            <div class="col-md-8" >
+              <input class="form-control" type="text" placeholder="กรุณาใส่ชื่อ-นามสกุล" formControlName="name"
+                [attr.disabled]="disabled ? '' : null">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-3">อายุ</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" placeholder="กรุณาใส่อายุ" formControlName="age"
+                [attr.disabled]="disabled ? '' : null">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-3">เบอร์โทรศัพท์</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" placeholder="กรุณาใส่เบอร์" formControlName="phone"
+                [attr.disabled]="disabled ? '' : null">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-3">อีเมล์</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" placeholder="กรุณาใส่อีเมล์" formControlName="email"
+                [attr.disabled]="disabled ? '' : null">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-3">Address</label>
+            <div class="col-md-8">
+              <textarea class="form-control" rows="4" placeholder="กรุณาใส่ที่อยู่" formControlName="address" [attr.disabled]="disabled ? '' : null">
+              </textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="control-label col-md-3">Gender</label>
+            <div class="col-md-9">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="gender" formControlName="gender" value="ชาย" [attr.disabled]="disabled ? '' : null">ชาย
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="gender"  formControlName="gender" value="หญิง" [attr.disabled]="disabled ? '' : null">หญิง
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <div class="row">
+          <div class="col-md-2">
+            <button class="btn btn-warning" type="button" (click)="unDisabled(true)">{{buttonEdit.text}}</button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-danger" type="button">เปลี่ยนรหัสผ่าน</button>
+          </div>
+
+
         </div>
+
+
+
+      </div>
     </div>
   </div>
 
