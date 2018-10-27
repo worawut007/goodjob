@@ -11,6 +11,9 @@ import { DetailWorkComponent } from './detail-work/detail-work.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogLoginComponent } from './dialog-login/dialog-login.component';
 
+import { CreateJobComponent } from './create-job/create-job.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -21,15 +24,20 @@ import { DialogLoginComponent } from './dialog-login/dialog-login.component';
     ProfileComponent,
     DetailWorkComponent,
     DialogLoginComponent,
+    CreateJobComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
   ],
   providers: [],
-  entryComponents: [DialogLoginComponent],
+  entryComponents: [
+    CreateJobComponent,
+    DialogLoginComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,11 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { MailInboxComponent } from './mail/mail-inbox/mail-inbox.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { DetailWorkComponent } from './detail-work/detail-work.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './dashboard/dashboard.module#DashboardModule',
+    component: DashboardComponent,
   },
   {
     path: 'mail',
