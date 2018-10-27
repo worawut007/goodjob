@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { DialogChangPasswordComponent } from 'src/app/dialog-chang-password/dialog-chang-password.component';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +11,10 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class ProfileComponent implements OnInit {
   createProfileForm: FormGroup;
   form: FormGroup;
-  constructor() {}
+  bsModalRef: BsModalRef;
+  constructor(
+    private modalService: BsModalService,
+  ) {}
   count = 0;
 
   disabled = true;
@@ -53,6 +58,14 @@ export class ProfileComponent implements OnInit {
 
   onFileSelected(event) {
     console.log(event);
+  }
+
+  openDialog(): void {
+    this.bsModalRef = this.modalService.show(DialogChangPasswordComponent, {
+      class: 'modal-dialog-centered',
+      animated: false,
+      keyboard: true
+    });
   }
 
 

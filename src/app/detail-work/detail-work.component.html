@@ -3,6 +3,11 @@
     <h1><i class="fa fa-laptop"></i> รายละเอียดของงาน</h1>
     <p>ผู้โพส : Chonticha Uds</p>
   </div>
+  <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a routerLink="/index">หน้าแรก</a></li>
+      <li class="breadcrumb-item"><a routerLink="/job-description/:id">รายละเอียดงาน</a></li>
+    </ul>
 </div>
 
 <div class="tile">
@@ -33,6 +38,6 @@
     <a class="btn btn-primary" href="#">รับงาน</a>
     <a class="btn btn-warning" href="#">แก้ไข</a>
     <a class="btn btn-danger" href="#">ร้องเรียน</a>
-    <a class="btn btn-primary" href="#">จัดการลูกจ้าง</a>
+    <a class="btn btn-primary" routerLink="/manage-employee">จัดการลูกจ้าง</a>
   </div>
 </div>

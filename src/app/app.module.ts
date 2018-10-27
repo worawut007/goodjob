@@ -15,6 +15,8 @@ import { CreateJobComponent } from './create-job/create-job.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MyJobComponent } from './my-job/my-job.component';
 import { JobService } from './services/job.service';
+import { DialogChangPasswordComponent } from './dialog-chang-password/dialog-chang-password.component';
+import { ManageEmployeeComponent } from './manage-employee/manage-employee.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { JobService } from './services/job.service';
     CreateJobComponent,
     DashboardComponent,
     MyJobComponent,
+    DialogChangPasswordComponent,
+    ManageEmployeeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,7 @@ import { JobService } from './services/job.service';
   entryComponents: [
     CreateJobComponent,
     DialogLoginComponent,
+    DialogChangPasswordComponent
   ],
   bootstrap: [AppComponent]
 })

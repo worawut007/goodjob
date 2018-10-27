@@ -1,7 +1,7 @@
 <!-- <router-outlet></router-outlet> -->
 
 <header class="app-header"><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
-<a class="app-header__logo" href="index.html"><img src="../../../assets/img/goodjob.png"/></a>
+<a class="app-header__logo" routerLink="/index"><img src="../../../assets/img/goodjob.png"/></a>
   <!-- Sidebar toggle button-->
   <!-- Navbar Right Menu-->
   <ul class="app-nav">
@@ -67,13 +67,13 @@
     <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i
           class="fa fa-user fa-lg"></i></a>
       <ul class="dropdown-menu settings-menu dropdown-menu-right" *ngIf="userLogin">
-        <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
-        <li><a class="dropdown-item" routerLink="/profile"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-        <li (click)="logout()"><a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+        <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> ตั้งค่า</a></li>
+        <li><a class="dropdown-item" routerLink="/profile"><i class="fa fa-user fa-lg"></i> โปรไฟล์</a></li>
+        <li (click)="logout()"><a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-lg"></i> ออกจากระบบ</a></li>
       </ul>
       <ul class="dropdown-menu settings-menu dropdown-menu-right" *ngIf="!userLogin">
-          <li (click)="openDialog()" ><a href="#" class="dropdown-item" ><i class="fa fa-sign-in fa-lg" ></i> Login</a></li>
-          <li><a class="dropdown-item" routerLink="/profile"><i class="fa fa-user-plus fa-lg"></i> Signup</a></li>
+          <li (click)="openDialog()" ><a href="#" class="dropdown-item" ><i class="fa fa-sign-in fa-lg" ></i> เข้าสู่ระบบ</a></li>
+          <li><a class="dropdown-item" routerLink="/profile"><i class="fa fa-user-plus fa-lg"></i> สมัครสมาชิก</a></li>
         </ul>
     </li>
   </ul>
