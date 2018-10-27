@@ -17,7 +17,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.jobs = this.getJobsPost();
-    console.log(this.jobs);
   }
   getJobsPost() {
     return this.jobService.getJobs();

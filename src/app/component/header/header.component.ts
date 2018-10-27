@@ -23,17 +23,24 @@ export class HeaderComponent implements OnInit {
     this.userLogin = this.authen.getAuthenticated();
   }
   openDialog(): void {
+    const initialState = {
+      title: 'เพิ่มรายชื่อ',
+      closeBtnName: 'ยกเลิก',
+      confirmBtnName: 'ยืนยัน',
+    };
     this.bsModalRef = this.modalService.show(DialogLoginComponent, {
       class: 'modal-dialog-centered',
+      initialState,
       animated: false,
       keyboard: true
     });
 
   }
+
   logout() {
     this.authen.clearAuthenticatied();
     this.userLogin = false;
-    this.router.navigateByUrl('home');
+    this.router.navigateByUrl('index');
   }
 
 }

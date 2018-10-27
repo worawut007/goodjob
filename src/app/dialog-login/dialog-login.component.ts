@@ -46,7 +46,7 @@ export class DialogLoginComponent implements OnInit {
       .catch(err => this.alert.notifly(err.Message));
 
   }
-  refresh(): void {
+  refresh() {
     window.location.reload();
 }
 

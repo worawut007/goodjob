@@ -25,10 +25,6 @@ const routes: Routes = [
     component: DetailWorkComponent
   },
   {
-    path: 'home',
-    component: DashboardComponent
-  },
-  {
     path: 'my-job',
     component: MyJobComponent
   },
@@ -36,6 +32,12 @@ const routes: Routes = [
     path: 'manage-employee',
     component: ManageEmployeeComponent
   },
+  {
+    path: '',
+    redirectTo: 'index',
+    pathMatch: 'full'
+  },
+
 ];
 
 @NgModule({

@@ -13,7 +13,6 @@ export class DetailWorkComponent implements OnInit {
   ngOnInit() {
     const jobId = this.route.snapshot.paramMap.get('id');
     this.job = this.jobService.getJobById(jobId);
-    console.log(this.job);
   }
 
 }
