@@ -14,6 +14,7 @@ import { DialogLoginComponent } from './dialog-login/dialog-login.component';
 import { CreateJobComponent } from './create-job/create-job.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MyJobComponent } from './my-job/my-job.component';
+import { JobService } from './services/job.service';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { MyJobComponent } from './my-job/my-job.component';
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    JobService,
+  ],
   entryComponents: [
     CreateJobComponent,
     DialogLoginComponent,

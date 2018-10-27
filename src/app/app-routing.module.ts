@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ProfileComponent,
   },
   {
-    path: 'job-description',
+    path: 'job-description/:id',
     component: DetailWorkComponent
   },
 
