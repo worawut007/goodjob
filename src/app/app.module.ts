@@ -8,7 +8,10 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { MailInboxComponent } from './mail/mail-inbox/mail-inbox.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { DetailWorkComponent } from './detail-work/detail-work.component';
-
+import { CreateJobComponent } from './create-job/create-job.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,19 @@ import { DetailWorkComponent } from './detail-work/detail-work.component';
     MailInboxComponent,
     ProfileComponent,
     DetailWorkComponent,
+    CreateJobComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
   ],
   providers: [],
+  entryComponents: [
+    CreateJobComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
