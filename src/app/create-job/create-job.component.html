@@ -1,4 +1,4 @@
-<div class="modal-content" >
+<div class="modal-content">
   <div class="modal-header">
     <h4 id="dialog-nested-name1" class="modal-title pull-left">สร้างงาน</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
@@ -8,57 +8,98 @@
   <div class="modal-body">
     <form class="form-horizontal" [formGroup]="createJobForm" (ngSubmit)="createJob()">
       <div class="form-group row">
-        <label class="control-label col-md-3">ชื่องาน</label>
-        <div class="col-md-8">
-          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="title">
+        <label class="control-label col-md-2">ชื่องาน</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="name">
         </div>
       </div>
       <div class="form-group row">
-        <label class="control-label col-md-3">ราคา</label>
-        <div class="col-md-8">
-          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="price">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-md-3">วันเริ่มงาน</label>
-        <div class="col-md-8">
-          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="startDate">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="control-label col-md-3">วันสิ้นสุดงาน</label>
-        <div class="col-md-8">
-          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="endDate">
-        </div>
-      </div>
-      <!-- <div class="form-group row">
-        <label class="control-label col-md-3">Gender</label>
-        <div class="col-md-9">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="gender">Male
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="gender">Female
-            </label>
+        <label class="control-label col-md-2">ราคา</label>
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="price">
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" id="exampleSelect1" formControlName="jobType">
+                <option value="บาท/ชั่วโมง">บาท/ชั่วโมง</option>
+                <option value="บาท/งาน">บาท/งาน</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="form-group row">
-        <div class="col-md-8 col-md-offset-3">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox">I accept the terms and conditions
-            </label>
-          </div>
-        </div>
-      </div> -->
+      </div>
 
+      <div class="form-group row">
+        <label class="control-label col-md-2">อายุ</label>
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-5">
+              <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="beginAge">
+            </div>
+            <div class="col-md-1">
+              ถึง
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="endAge">
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <hr>
-    <button type="submit" class="btn btn-primary" >Open second modal</button>
-  </form>
+      <div class="form-group row">
+        <label class="control-label col-md-2">เพศ</label>
+        <div class="col-md-10">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" formControlName="genderCondition" value="ชาย">ชาย
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" formControlName="genderCondition" value="หญิง">หญิง
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" formControlName="genderCondition" value="ไม่ระบุ">ไม่ระบุ
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="control-label col-md-2">จำนวนที่รับ</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="workerAmount">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="control-label col-md-2">วันที่ทำงาน</label>
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-5">
+              <input class="form-control" id="demoDate" type="text" placeholder="วัน/เดือน/ปี" formControlName="startDate">
+            </div>
+            <div class="col-md-1">
+              ถึง
+            </div>
+            <div class="col-md-6">
+              <input class="form-control" id="demoDate" type="text" placeholder="วัน/เดือน/ปี" formControlName="endDate">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="control-label col-md-2">รายละเอียดงาน</label>
+        <div class="col-md-10">
+          <input class="form-control" type="tex-area" placeholder="กรอกชื่องาน" formControlName="description">
+        </div>
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-primary">บันทึก</button>
+    </form>
   </div>
 </div>

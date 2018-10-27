@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'index',
     component: DashboardComponent,
   },
   {
@@ -21,6 +21,11 @@ const routes: Routes = [
   {
     path: 'job-description/:id',
     component: DetailWorkComponent
+  },
+  {
+    path: '',
+    redirectTo: 'index',
+    pathMatch: 'full'
   },
 
 ];

@@ -54,4 +54,8 @@ export class JobService {
       return job.id === id;
     });
   }
+
+  addJob(data) {
+    this.jobs.push(data);
+  }
 }
