@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenServic } from '../../authentication/services/authen.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private authen: AuthenServic) { }
+  userLogin;
   ngOnInit() {
+    this.userLogin = this.authen.getAuthenticated();
   }
 
 }
