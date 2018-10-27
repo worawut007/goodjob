@@ -1,0 +1,41 @@
+// header
+@media (min-width: 768px) {
+    .app-header__logo {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+      display: block;
+      width: 180px;
+      /* background-color: #007d71; */ 
+    }
+  }
+
+  // nav-bar
+  .app-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #40469E;
+    z-index: 1030;
+    padding-right: 15px;
+  }
+  .app-sidebar__toggle:focus, .app-sidebar__toggle:hover {
+    color: #fff;
+    background-color: #32367A;
+    text-decoration: none;
+  }
+  .app-menu__item.active, .app-menu__item:hover{
+    background: #0d1214;
+    border-left-color: #40469E;
+    text-decoration: none;
+    color: #fff;
+  }
+  .treeview.is-expanded [data-toggle='treeview'] {
+    border-left-color: #40469E;
+    background: #0d1214;
+  }
