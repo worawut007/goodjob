@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+declare var $: any;
 declare const App: any;
 @Component({
   selector: 'app-root',

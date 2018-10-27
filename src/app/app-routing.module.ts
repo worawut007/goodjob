@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'job-description/:id',
     component: DetailWorkComponent
   },
+  {
+    path: 'home',
+    component: DashboardComponent
+  },
 
 ];
 

@@ -15,6 +15,8 @@ import { CreateJobComponent } from './create-job/create-job.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MyJobComponent } from './my-job/my-job.component';
 import { JobService } from './services/job.service';
+import { AlertServices } from './services/alert.service';
+
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { JobService } from './services/job.service';
   ],
   providers: [
     JobService,
+    AlertServices
   ],
   entryComponents: [
     CreateJobComponent,

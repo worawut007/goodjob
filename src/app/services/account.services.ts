@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 
-export class AccountServices { //service นี้คือ Globalservice
+export class AccountServices { // service นี้คือ Globalservice
 
     public mockUserItems: IAccount[] = [
         {
@@ -42,7 +42,7 @@ export class AccountServices { //service นี้คือ Globalservice
             created: new Date(),
             updated: new Date()
         },
-    ]
+    ];
 
     // เปลี่ยนรหัสผ่านใหม่
     // onChangePassword(accessToken: string, model: IChangePassword) {
@@ -72,12 +72,12 @@ export class AccountServices { //service นี้คือ Globalservice
 
     // }
 
-    //ดึงข้อมูลผู้ที่เข้าสู่ระบบจาก token
+    // ดึงข้อมูลผู้ที่เข้าสู่ระบบจาก token
 
     getUserLogin(accessToken: string) {
         return new Promise<IAccount>((resolve, reject) => {
-            const userLogin = this.mockUserItems.find(m => m.id == accessToken);
-            if (!userLogin) return reject({ Message: 'access Token ไม่ถูกต้อง' });
+            const userLogin = this.mockUserItems.find(m => m.id === accessToken);
+            if (!userLogin) { return reject({ Message: 'access Token ไม่ถูกต้อง' }); }
             resolve(userLogin);
         });
     }
@@ -86,8 +86,8 @@ export class AccountServices { //service นี้คือ Globalservice
     // เข้าสู่ระบบ
     onLogin(model: ILogin) {
         return new Promise<{ accessToken: string }>((resolve, reject) => {
-            const userLogin = this.mockUserItems.find(item => item.email == model.email && item.password == model.password)
-            if (!userLogin) { console.log("dsads"); return reject({ Message: 'ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง' }); }
+            const userLogin = this.mockUserItems.find(item => item.email === model.email && item.password === model.password);
+            if (!userLogin) { return reject({ Message: 'ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง' }); }
             resolve({
                 accessToken: userLogin.id
             });
@@ -116,7 +116,7 @@ export interface IAccount {
     updated: Date;
 }
 export interface ILogin {
-    email: string ;
-    password: string ;
+    email: string;
+    password: string;
 
 }
