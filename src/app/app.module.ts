@@ -7,6 +7,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { MailInboxComponent } from './mail/mail-inbox/mail-inbox.component';
 import { ProfileComponent } from './profile/profile/profile.component';
+import { DetailWorkComponent } from './detail-work/detail-work.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ProfileComponent } from './profile/profile/profile.component';
     SidebarComponent,
     MailInboxComponent,
     ProfileComponent,
+    DetailWorkComponent,
   ],
   imports: [
     BrowserModule,
