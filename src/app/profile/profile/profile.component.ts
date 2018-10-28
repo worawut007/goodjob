@@ -56,6 +56,13 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  save() {
+    this.disabled = true;
+    this.buttonEdit.text = 'แก้ไขโปรไฟล์';
+    this.buttonEdit.status = true;
+    this.count = 0;
+  }
+
   onFileSelected(event) {
     console.log(event);
   }

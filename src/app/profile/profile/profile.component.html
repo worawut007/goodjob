@@ -95,7 +95,7 @@
             <button class="btn btn-warning" type="button" (click)="unDisabled(true)">{{buttonEdit.text}}</button>
           </div>
           <div class="col-md-2">
-            <button class="btn btn-success" type="button" *ngIf=!disabled>บันทึก</button>
+            <button class="btn btn-success" type="button" *ngIf=!disabled (click)="save()">บันทึก</button>
           </div>
 
         </div>
