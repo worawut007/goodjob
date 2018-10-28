@@ -19,6 +19,8 @@ import { AlertServices } from './services/alert.service';
 
 import { DialogChangPasswordComponent } from './dialog-chang-password/dialog-chang-password.component';
 import { ManageEmployeeComponent } from './manage-employee/manage-employee.component';
+import { MyPostJobComponent } from './my-post-job/my-post-job.component';
+import { MyWorkingJobComponent } from './my-working-job/my-working-job.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { ManageEmployeeComponent } from './manage-employee/manage-employee.compo
     MyJobComponent,
     DialogChangPasswordComponent,
     ManageEmployeeComponent,
+    MyPostJobComponent,
+    MyWorkingJobComponent,
   ],
   imports: [
     BrowserModule,

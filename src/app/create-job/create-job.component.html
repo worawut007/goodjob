@@ -10,7 +10,7 @@
       <div class="form-group row">
         <label class="control-label col-md-2">ชื่องาน</label>
         <div class="col-md-10">
-          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="name">
+          <input class="form-control" type="text" placeholder="กรุณาระบุชื่องาน" formControlName="name">
         </div>
       </div>
       <div class="form-group row">
@@ -18,7 +18,7 @@
         <div class="col-md-10">
           <div class="row">
             <div class="col-md-6">
-              <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="price">
+              <input class="form-control" type="text" placeholder="กรุณาระบุราคาที่จะจ้างงาน" formControlName="price">
             </div>
             <div class="col-md-6">
               <select class="form-control" id="exampleSelect1" formControlName="jobType">
@@ -35,13 +35,13 @@
         <div class="col-md-10">
           <div class="row">
             <div class="col-md-5">
-              <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="beginAge">
+              <input class="form-control" type="text" placeholder="กรุณาระบุอายุที่จำกัด" formControlName="beginAge">
             </div>
             <div class="col-md-1">
               ถึง
             </div>
             <div class="col-md-6">
-              <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="endAge">
+              <input class="form-control" type="text" placeholder="กรุณาระบุอายุที่จำกัด" formControlName="endAge">
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
       <div class="form-group row">
         <label class="control-label col-md-2">จำนวนที่รับ</label>
         <div class="col-md-10">
-          <input class="form-control" type="text" placeholder="กรอกชื่องาน" formControlName="workerAmount">
+          <input class="form-control" type="text" placeholder="กรุณาระบุจำนวนที่รับคน" formControlName="workerAmount">
         </div>
       </div>
 
@@ -80,13 +80,13 @@
         <div class="col-md-10">
           <div class="row">
             <div class="col-md-5">
-              <input class="form-control" id="demoDate" type="text" placeholder="วัน/เดือน/ปี" formControlName="startDate">
+              <input class="form-control" id="demoDate" type="date" placeholder="เดือน/วัน/ปี" formControlName="startDate">
             </div>
             <div class="col-md-1">
               ถึง
             </div>
             <div class="col-md-6">
-              <input class="form-control" id="demoDate" type="text" placeholder="วัน/เดือน/ปี" formControlName="endDate">
+              <input class="form-control" id="demoDate" type="date" placeholder="เดือน/วัน/ปี" formControlName="endDate">
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
       <div class="form-group row">
         <label class="control-label col-md-2">รายละเอียดงาน</label>
         <div class="col-md-10">
-          <input class="form-control" type="tex-area" placeholder="กรอกชื่องาน" formControlName="description">
+          <textarea formControlName="description" placeholder="กรุณาระบุรายละเอียดของงาน"></textarea>
         </div>
       </div>
       <hr>

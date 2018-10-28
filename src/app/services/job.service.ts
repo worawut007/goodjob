@@ -1,57 +1,42 @@
 import { Injectable } from '@angular/core';
-
+import { dataJob } from './mock-data-job';
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
-  private jobs = [
-    {
-      id: '12345',
-      userOwner: 'Chonticha Uds',
-      name: 'Job2',
-      jobStatus: 'เปิดรับคนอยู่',
-      address: 'แยกลงหาดบางแสน',
-      price: 200,
-      jobType: 'บาท/วัน',
-      worker: ['a', 'b', 'c', 'd'], // person
-      genderCondition: 'ชาย',
-      beginAge: 18,
-      endAge: 40,
-      workerAmount: 10,
-      description: 'สิ่งประดิษฐ์จากวัสดุเหลือใช้. กำไลข้อมือ กระดาษแข็ง หุ้มด้วยไหมพรม',
-      createDate: new Date(2018, 10, 27),
-      startDate: new Date(2018, 10, 27),
-      endDate: new Date(2018, 10, 27),
-
-    },
-    {
-      id: '6789',
-      userOwner: 'Chonticha Uds',
-      name: 'Job2',
-      jobStatus: 'ไม่รับคนแล้ว',
-      address: 'แยกลงหาดบางแสน',
-      price: 200,
-      jobType: 'บาท/วัน',
-      worker: ['a', 'b', 'c', 'd'], // person
-      genderCondition: 'ไม่ระบุ',
-      beginAge: 18,
-      endAge: 40,
-      workerAmount: 10,
-      description: 'สิ่งประดิษฐ์จากวัสดุเหลือใช้. กำไลข้อมือ กระดาษแข็ง หุ้มด้วยไหมพรม',
-      createDate: new Date(2561, 10, 27),
-      startDate: new Date(2561, 10, 27),
-      endDate: new Date(2561, 10, 27),
-    },
-  ];
+  private jobs = dataJob;
   constructor() { }
 
   getJobs() {
     return this.jobs;
   }
 
-  getJobById(id: string) {
+  getMyPostJobs(id) {
+    // tslint:disable-next-line:prefer-const
+    let getData = [];
+    for (let i = 0; i < this.jobs.length; i++) {
+      if (this.jobs[i].id === 2) { // Moc data id 2 is Post job this is like user from login
+        getData.push(this.jobs[i]);
+      }
+    }
+    return getData;
+  }
+
+  getMyWorkingJobs(id) {
+    // tslint:disable-next-line:prefer-const
+    let getData = [];
+    for (let i = 0; i < this.jobs.length; i++) {
+      if (this.jobs[i].id === 1) { // Moc data id 1 is working jobs this is like user from login
+        getData.push(this.jobs[i]);
+      }
+    }
+    return getData;
+  }
+
+  getJobById(id) {
     return this.jobs.find((job) => {
-      return job.id === id;
+      // tslint:disable-next-line:triple-equals
+      return job.id == id;
     });
   }
 
