@@ -77,7 +77,7 @@ export class AccountServices { // service นี้คือ Globalservice
     getUserLogin(accessToken: string) {
         return new Promise<IAccount>((resolve, reject) => {
             const userLogin = this.mockUserItems.find(m => m.id == accessToken);
-            if (!userLogin) { return reject({ Message: 'access Token ไม่ถูกต้อง' }); }
+            if (!userLogin) { return ; }
             resolve(userLogin);
         });
     }

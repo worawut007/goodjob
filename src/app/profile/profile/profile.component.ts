@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { DialogChangPasswordComponent } from 'src/app/dialog-chang-password/dialog-chang-password.component';
+import { AuthenServic } from '../../authentication/services/authen.service';
+import { AccountServices } from '../../services/account.services';
 
 @Component({
   selector: 'app-profile',
@@ -12,9 +14,14 @@ export class ProfileComponent implements OnInit {
   createProfileForm: FormGroup;
   form: FormGroup;
   bsModalRef: BsModalRef;
+  userLogin;
+  user;
+
   constructor(
     private modalService: BsModalService,
-  ) {}
+    private authen: AuthenServic,
+    private account: AccountServices
+  ) { }
   count = 0;
 
   disabled = true;
@@ -40,7 +47,7 @@ export class ProfileComponent implements OnInit {
   }
 
   unDisabled(check) {
-     this.count += 1;
+    this.count += 1;
     if (this.count === 1) {
       this.disabled = false;
       this.buttonEdit.text = 'ยกเลิก';

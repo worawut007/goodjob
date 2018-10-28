@@ -11,10 +11,10 @@
 
   <ul class="app-menu">
     <li><a class="app-menu__item active" routerLink="/index"><i class="app-menu__icon fa fa-bullhorn"></i><span class="app-menu__label">ประกาศรับสมัครงาน</span></a></li>
-    <li><a class="app-menu__item" routerLink="/mail"><i class="app-menu__icon fa fa-envelope-o"></i><span class="app-menu__label">ข้อความเข้า</span></a></li>
-    <li><a class="app-menu__item" routerLink="/my-job"><i class="app-menu__icon fa fa-history"></i><span class="app-menu__label">ประวัติการทำงานของฉัน</span></a></li>
-    <li><a class="app-menu__item" routerLink="/my-working-job"><i class="app-menu__icon fa fa-list-alt"></i><span class="app-menu__label">งานจ้างของฉัน</span></a></li>
-    <li><a class="app-menu__item" routerLink="/my-post-job"><i class="app-menu__icon fa fa-address-book"></i><span class="app-menu__label">โพสงานของฉัน</span></a></li>
+    <li *ngIf="userLogin"><a class="app-menu__item" routerLink="/mail"><i class="app-menu__icon fa fa-envelope-o"></i><span class="app-menu__label" >ข้อความเข้า</span></a></li>
+    <li *ngIf="userLogin"><a class="app-menu__item" routerLink="/my-job"><i class="app-menu__icon fa fa-history"></i><span class="app-menu__label">ประวัติการทำงานของฉัน</span></a></li>
+    <li *ngIf="userLogin"><a class="app-menu__item" routerLink="/my-working-job"><i class="app-menu__icon fa fa-list-alt"></i><span class="app-menu__label">งานจ้างของฉัน</span></a></li>
+    <li *ngIf="userLogin"><a class="app-menu__item" routerLink="/my-post-job"><i class="app-menu__icon fa fa-address-book"></i><span class="app-menu__label" >โพสงานของฉัน</span></a></li>
 
 
   </ul>
