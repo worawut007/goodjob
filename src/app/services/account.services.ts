@@ -76,7 +76,7 @@ export class AccountServices { // service นี้คือ Globalservice
 
     getUserLogin(accessToken: string) {
         return new Promise<IAccount>((resolve, reject) => {
-            const userLogin = this.mockUserItems.find(m => m.id === accessToken);
+            const userLogin = this.mockUserItems.find(m => m.id == accessToken);
             if (!userLogin) { return reject({ Message: 'access Token ไม่ถูกต้อง' }); }
             resolve(userLogin);
         });
@@ -94,14 +94,14 @@ export class AccountServices { // service นี้คือ Globalservice
         });
     }
 
-    // ลงทะเบียน
-    // onRegister(model: IRegister) {
-    //     return new Promise((resolve, reject) => {
-    //         model['id'] = Math.random();
-    //         this.mockUserItems.push(model);
-    //         resolve(model);
-    //     })
-    // }
+    onRegister(model: IRegister) {
+        console.log(model)
+        return new Promise((resolve, reject) => {
+            model['id'] = Math.random();
+            this.mockUserItems.push(model);
+            resolve(model);
+        });
+    }
 }
 export interface IAccount {
     firstname: string;
@@ -119,4 +119,19 @@ export interface ILogin {
     email: string;
     password: string;
 
+}
+export interface IRegister {
+    firstname: string;
+    lastname: string;
+    tel: string;
+    birthdate: Date;
+    sex: string;
+    address: string;
+    email: string;
+    password: string;
+    id: any;
+    image: string;
+    cpassword: string;
+    created: Date;
+    updated: Date;
 }

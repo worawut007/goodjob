@@ -1,11 +1,11 @@
 <!-- Sidebar menu-->
 <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 <aside class="app-sidebar">
-  <div *ngIf="userLogin" class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="../../../assets/img/ken.jpg"
+  <div *ngIf="userLogin" class="app-sidebar__user"><img class="app-sidebar__user-avatar" src={{user.image}}
       alt="User Image">
     <div>
-      <p class="app-sidebar__user-name">John Doe</p>
-      <p class="app-sidebar__user-designation">Frontend Developer</p>
+      <p class="app-sidebar__user-name">{{user.firstname}}</p>
+      <p class="app-sidebar__user-designation">{{user.lastname}}</p>
     </div>
   </div>
   

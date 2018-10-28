@@ -69,7 +69,7 @@
       </ul>
       <ul class="dropdown-menu settings-menu dropdown-menu-right" *ngIf="!userLogin">
           <li (click)="openDialog()" ><a class="dropdown-item" ><i class="fa fa-sign-in fa-lg" ></i> เข้าสู่ระบบ</a></li>
-          <li><a class="dropdown-item" routerLink="/profile"><i class="fa fa-user-plus fa-lg"></i> สมัครสมาชิก</a></li>
+          <li (click)="openDialogRe()"><a class="dropdown-item" ><i class="fa fa-user-plus fa-lg"></i> สมัครสมาชิก</a></li>
         </ul>
     </li>
   </ul>

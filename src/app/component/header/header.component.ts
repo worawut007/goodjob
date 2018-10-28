@@ -4,6 +4,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { AuthenServic } from '../../authentication/services/authen.service';
 import { Router } from '@angular/router';
+import { DialogRegisterComponent} from '../../dialog-register/dialog-register.component';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -29,6 +30,20 @@ export class HeaderComponent implements OnInit {
       confirmBtnName: 'ยืนยัน',
     };
     this.bsModalRef = this.modalService.show(DialogLoginComponent, {
+      class: 'modal-dialog-centered',
+      initialState,
+      animated: false,
+      keyboard: true
+    });
+
+  }
+  openDialogRe(): void {
+    const initialState = {
+      title: 'เพิ่มรายชื่อ',
+      closeBtnName: 'ยกเลิก',
+      confirmBtnName: 'ยืนยัน',
+    };
+    this.bsModalRef = this.modalService.show(DialogRegisterComponent, {
       class: 'modal-dialog-centered',
       initialState,
       animated: false,
