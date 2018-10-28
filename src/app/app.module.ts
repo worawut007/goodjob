@@ -21,6 +21,8 @@ import { ValidatorsService} from './services/validators.services';
 import { DialogChangPasswordComponent } from './dialog-chang-password/dialog-chang-password.component';
 import { ManageEmployeeComponent } from './manage-employee/manage-employee.component';
 import { DialogRegisterComponent} from './dialog-register/dialog-register.component';
+import { MyPostJobComponent } from './my-post-job/my-post-job.component';
+import { MyWorkingJobComponent } from './my-working-job/my-working-job.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { DialogRegisterComponent} from './dialog-register/dialog-register.compon
     DialogChangPasswordComponent,
     ManageEmployeeComponent,
     DialogRegisterComponent,
+    MyPostJobComponent,
+    MyWorkingJobComponent,
   ],
   imports: [
     BrowserModule,

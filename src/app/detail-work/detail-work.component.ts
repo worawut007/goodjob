@@ -8,11 +8,12 @@ import { JobService } from '../services/job.service';
 })
 export class DetailWorkComponent implements OnInit {
   job: any;
+  jobId = '';
   constructor(private route: ActivatedRoute, private jobService: JobService) { }
 
   ngOnInit() {
-    const jobId = this.route.snapshot.paramMap.get('id');
-    this.job = this.jobService.getJobById(jobId);
+    this.jobId = this.route.snapshot.paramMap.get('id');
+    this.job = this.jobService.getJobById(this.jobId);
   }
 
 }

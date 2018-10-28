@@ -1,18 +1,15 @@
 <div class="app-title">
   <div>
-    <h1><i class="fa fa-laptop"></i> ค้นหางาน</h1>
+    <h1><i class="fa fa-laptop"></i>โพสงานของฉัน</h1>
     <p></p>
   </div>
 
-  <div class="breadcrumb app-breadcrumb">
-    <button class="btn btn-primary" (click)="openModalWithComponent()">สร้างงาน</button>
-  </div>
 </div>
 
-<div class="tile" *ngFor="let job of jobs; let i = index">
+<div class="tile" *ngFor="let job of jobs">
   <div class="row">
     <div class="col-md-2">
-      <img class="img" src="assets/img/user{{i}}.png"
+      <img class="img" src="assets/img/ken.jpg"
         alt="">
     </div>
     <div class="col-md-10">

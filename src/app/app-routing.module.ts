@@ -6,6 +6,8 @@ import { DetailWorkComponent } from './detail-work/detail-work.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MyJobComponent } from './my-job/my-job.component';
 import { ManageEmployeeComponent } from './manage-employee/manage-employee.component';
+import { MyPostJobComponent } from './my-post-job/my-post-job.component';
+import { MyWorkingJobComponent } from './my-working-job/my-working-job.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'manage-employee',
     component: ManageEmployeeComponent
+  },
+  {
+    path: 'my-post-job',
+    component: MyPostJobComponent
+  },
+  {
+    path: 'my-working-job',
+    component: MyWorkingJobComponent
   },
   {
     path: '',
