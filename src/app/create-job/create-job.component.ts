@@ -17,6 +17,7 @@ export class CreateJobComponent implements OnInit {
   ngOnInit() {
     this.createJobForm = new FormGroup({
       'name': new FormControl(''),
+      'userOwner': new FormControl('Worawut Sangangam'),
       'jobStatus': new FormControl('เปิดรับคนอยู่'),
       'address': new FormControl(''),
       'price': new FormControl(''),

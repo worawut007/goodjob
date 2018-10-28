@@ -14,7 +14,6 @@ export class SidebarComponent implements OnInit {
   userLogin;
   user;
   ngOnInit() {
-    console.log(this.user);
     this.account.getUserLogin(this.authen.getAuthenticated()).then( result => { this.user = result;
     this.userLogin = this.authen.getAuthenticated();
     });
